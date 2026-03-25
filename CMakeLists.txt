@@ -8,8 +8,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 # Cria o executável
-add_executable(main main.cpp)
-add_executable(main teste.cpp)
+add_executable(main_app main.cpp)
 
-# Linka as bibliotecas do OpenCV ao seu executável
-target_link_libraries(main ${OpenCV_LIBS})
+# Linka as bibliotecas do OpenCV ao executável
+target_link_libraries(main_app ${OpenCV_LIBS})

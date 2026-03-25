@@ -3,17 +3,20 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "Compilar OpenCV",
-            "command": "g++",
+            "label": "Compilar OpenCV MSYS2",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I", "C:\\Users\\vinia\\OneDrive\\Documentos\\opencv\\build\\include",
-                "-L", "C:\\Users\\vinia\\OneDrive\\Documentos\\opencv\\build\\x64\\mingw\\lib",
-                "-l", "opencv_world4100"
+                "-I", "C:\\msys64\\ucrt64\\include\\opencv4",
+                "-L", "C:\\msys64\\ucrt64\\lib",
+                "-l", "opencv_core",
+                "-l", "opencv_imgcodecs",
+                "-l", "opencv_highgui",
+                "-l", "opencv_imgproc"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -25,7 +28,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Tarefa gerada para compilar OpenCV no Windows"
+            "detail": "Tarefa de compilação para OpenCV via MSYS2"
         }
     ]
 }
